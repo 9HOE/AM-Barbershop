@@ -3,57 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AM Barber Shop</title>
-  <!-- Critical: relative path -->
-  <link rel="stylesheet" href="styles.css">
+  <title>AM Barber Shop | Professional Grooming</title>
+
+  <!-- Correct relative path -->
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>AM Barber Shop</h1>
+<header class="header">
+  <div class="container nav">
+    <div class="logo">AM Barber Shop</div>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#booking">Book</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <h2>Clean Cuts. Sharp Fades.</h2>
-    <p>Professional barbering done right.</p>
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Clean Cuts. Sharp Fades.</h1>
+    <p>Professional grooming done right.</p>
     <a href="#booking" class="btn">Book Appointment</a>
-  </section>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>AM Barber Shop delivers precision cuts, sharp fades, and professional grooming.</p>
-  </section>
+<section id="about" class="section dark">
+  <div class="container">
+    <h2>About AM Barber Shop</h2>
+    <p>
+      AM Barber Shop delivers precision cuts, clean fades,
+      and professional grooming in a modern, relaxed environment.
+    </p>
+  </div>
+</section>
 
-  <section id="services">
+<section id="services" class="section">
+  <div class="container">
     <h2>Services</h2>
-    <div class="service"><span>Men’s Haircut</span><span>$35+</span></div>
-    <div class="service"><span>Beard Trim</span><span>$20+</span></div>
-    <div class="service"><span>Hot Towel Shave</span><span>$40+</span></div>
-  </section>
 
-  <section id="booking">
+    <div class="service-row"><span>Men’s Haircut</span><span>$35+</span></div>
+    <div class="service-row"><span>Beard Trim</span><span>$20+</span></div>
+    <div class="service-row"><span>Hot Towel Shave</span><span>$40+</span></div>
+    <div class="service-row"><span>Haircut & Beard Combo</span><span>$50+</span></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <h2>Client Reviews</h2>
+    <p>★★★★★ Best barber shop in town.</p>
+    <p>★★★★★ Always clean and professional.</p>
+    <p>★★★★★ Never miss with the fades.</p>
+  </div>
+</section>
+
+<section id="booking" class="section">
+  <div class="container">
     <h2>Book Your Appointment</h2>
-    <iframe src="about:blank" class="booking-frame"></iframe>
-  </section>
+    <p>Select your barber and time below.</p>
 
-  <section id="contact">
+    <!-- Replace with Booksy / Square iframe -->
+    <iframe class="booking-frame" src="about:blank"></iframe>
+  </div>
+</section>
+
+<section id="contact" class="section dark">
+  <div class="container">
     <h2>Location & Hours</h2>
-    <p>123 Main Street</p>
-    <p>(555) 123-4567</p>
-    <p>Mon–Sat: 9am – 7pm</p>
-  </section>
 
-  <footer>
+    <p><strong>Address:</strong> 123 Main Street</p>
+    <p><strong>Phone:</strong> (555) 123-4567</p>
+
+    <p>Mon–Fri: 9am – 7pm</p>
+    <p>Sat: 9am – 5pm</p>
+    <p>Sun: Closed</p>
+
+    <iframe
+      class="map"
+      src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <p>© AM Barber Shop</p>
     <p>Website by <strong>Casey’s Web Solutions</strong></p>
-  </footer>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
