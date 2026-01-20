@@ -1,9 +1,10 @@
 :root {
-  --dark: #0f0f0f;
-  --light: #1c1c1c;
+  --bg: #0f0f0f;
+  --bg-dark: #171717;
   --accent: #c89b3c;
   --text: #ffffff;
-  --muted: #b3b3b3;
+  --muted: #b5b5b5;
+  --max-width: 1100px;
 }
 
 * {
@@ -13,33 +14,39 @@
 }
 
 body {
-  background: var(--dark);
+  background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
 }
 
-/* HEADER */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
 .header {
-  background: var(--light);
-  padding: 20px 40px;
+  background: var(--bg-dark);
+  padding: 20px 0;
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
 .logo {
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
-.nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-/* HERO */
 .hero {
   min-height: 90vh;
   background:
@@ -48,11 +55,10 @@ body {
     center / cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 40px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .hero-content p {
@@ -68,42 +74,28 @@ body {
   text-decoration: none;
 }
 
-/* SECTIONS */
 .section {
-  padding: 70px 40px;
+  padding: 80px 20px;
 }
 
-.section h2 {
-  margin-bottom: 20px;
+.section.dark {
+  background: var(--bg-dark);
 }
 
-/* ABOUT */
-.about {
-  background: var(--light);
-}
-
-/* SERVICES */
-.service {
+.service-row {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-  border-bottom: 1px solid var(--muted);
+  border-bottom: 1px solid #333;
 }
 
-/* REVIEWS */
-.reviews {
-  background: var(--light);
-}
-
-/* BOOKING */
-.booking iframe {
+.booking-frame {
   width: 100%;
   height: 450px;
   border: none;
-  background: #000;
+  margin-top: 20px;
 }
 
-/* CONTACT */
 .map {
   width: 100%;
   height: 300px;
@@ -111,19 +103,14 @@ body {
   margin-top: 20px;
 }
 
-/* FOOTER */
 .footer {
   background: #000;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   color: var(--muted);
 }
 
-.footer-links {
-  margin-bottom: 15px;
-}
-
-.footer-links a {
+.footer-nav a {
   color: var(--muted);
   margin: 0 10px;
   text-decoration: none;
